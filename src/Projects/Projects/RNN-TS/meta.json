@@ -1,0 +1,16 @@
+{   "title": "Reproduction: Recurrent Neural Networks for Multivariate Time Series with Missing Values",
+    "date": "May 21st, 2021",
+    "link": "/projects/RNN-TS",
+    "imageTitle": "Missing Data",
+    "tags": [{
+        "label": "Reproduction",
+        "description": "This analysis is a reproduction and an extension of an existing empirical study."
+    },{
+        "label": "MIMIC-III",
+        "description": "MIMIC-III is a publicly-available dataset consisting of tens of thousands of records of longitudinal EMR data.",
+        "color": "blue"
+    },
+    {   "label": "RNN",
+        "description": "In this post I implement a recurrent neural network",
+        "color": "green"
+    }]}

@@ -1,0 +1,14 @@
+{   "title": "This is the title ",
+    "date": "May 16th, 2021",
+    "image": "./BlogPost1/img/roc.png",
+    "link": "/blog/blog1",
+    "imageTitle": "image title",
+    "tags": [{
+        "label": "MIMIC-III",
+        "description": "MIMIC-III is a publicly-available dataset consisting of tens of thousands of records of longitudinal EMR data.",
+        "color": "blue"
+    },
+    {   "label": "Machine learning",
+        "description": "In this post I use machine learning",
+        "color": "green"
+    }]}

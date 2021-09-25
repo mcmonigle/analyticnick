@@ -1,0 +1,17 @@
+{   "title": "Reproduction: An Interpretable ML Model for Accurate Prediction of Sepsis in the ICU",
+    "date": "May 16th, 2021",
+    "image": "../Projects/Project1/img/roc.png",
+    "link": "/projects/icu-sepsis",
+    "imageTitle": "ROC Curve",
+    "tags": [{
+        "label": "Reproduction",
+        "description": "This analysis is a reproduction and an extension of an existing empirical study."
+    },{
+        "label": "MIMIC-III",
+        "description": "MIMIC-III is a publicly-available dataset consisting of tens of thousands of records of longitudinal EMR data.",
+        "color": "blue"
+    },
+    {   "label": "Machine learning",
+        "description": "In this post I use machine learning",
+        "color": "green"
+    }]}
