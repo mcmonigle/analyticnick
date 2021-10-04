@@ -2,7 +2,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import MainFeaturedPost from './Components/MainFeaturedPost';
 import FeaturedPost from './Components/FeaturedPost';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';

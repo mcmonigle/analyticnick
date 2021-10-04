@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
 import Sidebar from '../../../Components/Sidebar';
-import MarkdownCode from '../../../Components/MarkdownCode.js';
 import MarkdownMathCode from '../../../Components/MarkdownMathCode.js';
 
 import PlotlyScatter from '../../../Components/Plots/PlotlyScatter.js';
@@ -13,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 const sidebar = {
     title: 'Disclaimer',
     description:
-        'I am not affiliated with any research institution. This analysis is solely recreational.',
+        'I am not affiliated with any research institution, nor am I a clinician in any capacity. This analysis is solely recreational.',
     social: [
         { type: 'Paper', name: 'See the original paper', url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5851825/' },
         { type: 'GitHub', name: 'See the notebook', url: 'https://github.com/mcmonigle' },
@@ -73,9 +72,9 @@ $$
 \\text{AUROC} & 0.80 \\ (0.81) & 0.78 \\ (0.80) & 0.77 \\ (0.79) & 0.76 \\ (0.78) \\\\
 \\text{Specificity*} & 0.57 \\ (0.61) & 0.54 \\ (0.58) & 0.52 \\ (0.55) & 0.51 \\ (0.54) \\\\
 \\text{Accuracy} & 0.57 \\ (0.61) & 0.55 \\ (0.58) & 0.53 \\ (0.56) & 0.52 \\ (0.55) \\\\ \\hline
-\\end {array}
+\\end {array} 
 $$
-\\text{And this is the text that goes underneath the table. And this is the text that goes underneath the table. And this is the text that goes underneath the table. And this is the text that goes underneath the table.}
+And this is the text that goes underneath the table. And this is the text that goes underneath the table. And this is the text that goes underneath the table. And this is the text that goes underneath the table.
 `
 // plot 1 
 
