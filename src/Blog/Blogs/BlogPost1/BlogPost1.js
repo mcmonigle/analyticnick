@@ -1,10 +1,10 @@
 import { makeStyles } from '@material-ui/core/styles';
-import Sidebar from '../../Components/Sidebar';
-import MarkdownCode from '../../Components/MarkdownCode.js';
-import MarkdownMathCode from '../../Components/MarkdownMathCode.js';
+import Sidebar from '../../../Components/Sidebar';
+import MarkdownCode from '../../../Components/MarkdownCode.js';
+import MarkdownMathCode from '../../../Components/MarkdownMathCode.js';
 
-import PlotlyScatter from '../../Components/Plots/PlotlyScatter.js';
-import PlotlyROC from '../../Components/Plots/PlotlyROC.js';
+import PlotlyScatter from '../../../Components/Plots/PlotlyScatter.js';
+import PlotlyROC from '../../../Components/Plots/PlotlyROC.js';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({

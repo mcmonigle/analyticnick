@@ -25,7 +25,7 @@ export default function MarkdownMathCode(props) {
 const classes = useStyles();
 vs2015.hljs.background = "#0e0e0e"
 const components = {
-    code({node, inline, className, children, ...props}) {
+  code({node, inline, className, children, ...props}) {
       const match = /language-(\w+)/.exec(className || '')
       return !inline && match ? (
         <SyntaxHighlighter className={classes.codeBlock} remarkPlugins={[gfm]} language="python" style={vs2015} PreTag="div" children={String(children).replace(/\n$/, '')} {...props} />
@@ -34,7 +34,8 @@ const components = {
       )
     }
   }
- console.log(vs2015)
+  components.a = ({node, ...props}) => <a style={{color: "white"}} {...props} /> // make links appear white
+ 
     return ( 
       <ReactMarkdown children={props.markdown} 
                         components={components}

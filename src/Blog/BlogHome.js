@@ -7,7 +7,7 @@ import {
     Link
 } from "react-router-dom";
 import bp1img from './BlogPost1/img/roc.png'
-const bp1 = require('./BlogPost1/Meta.json')
+const bp1 = require('./Blogs/BlogPost1/Meta.json')
 
 const useStyles = makeStyles((theme) => ({
 

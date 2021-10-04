@@ -8,7 +8,7 @@ import {
 
 const BlogHome = lazy(() => import('./BlogHome'))
 const BlogPost1 = lazy(() => import('./BlogPost1/BlogPost1'));
-const BlogPost2 = lazy(() => import('./BlogPost2'));
+
 
 export default function BlogRoutes(props) {
     let { path } = useRouteMatch();
@@ -18,7 +18,6 @@ export default function BlogRoutes(props) {
          <Switch>
             <Route exact path={path} component={BlogHome} />             
             <Route path={`${path}/blog1`} component={BlogPost1} />
-            <Route path={`${path}/blog2`} component={BlogPost2} />                                                        
          </Switch>
         </Suspense>         
     )
