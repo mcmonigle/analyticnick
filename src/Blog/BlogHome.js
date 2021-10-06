@@ -14,7 +14,7 @@ const sidebar = {
     description:
         'This is where I write tutorials and muse about things that interest me.',
     social: [
-        { type: 'GitHub', name: 'See my notebooks', url: 'https://github.com/mcmonigle' },
+        { type: 'GitHub', name: 'See my code', url: 'https://github.com/mcmonigle' },
         { type: 'LinkedIn', name: 'Connect with me', url: 'https://linkedin.com/in/nicholasmcmonigle' }
     ],
 };
