@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Sidebar(props) {
   const classes = useStyles();
-  const { archives, description, social, title } = props;
+  const {  description, social, title } = props;
 
   function socialNetwork(network) {
     let icon;

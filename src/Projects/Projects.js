@@ -3,7 +3,6 @@ import {
     Switch,
     Route,
     useRouteMatch,
-    HashRouter as Router
 } from "react-router-dom";
 
 const ProjectsHome = lazy(() => import('./ProjectsHome'))

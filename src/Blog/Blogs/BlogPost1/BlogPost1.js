@@ -43,7 +43,6 @@ data.plot.scatter(x=var, y='SalePrice', ylim=(0,800000));
 ~~~
 `
 // plot 1 
-const markdown2 = `# And some more...`
 
 export default function BlogPost1(props) {
 const classes = useStyles();

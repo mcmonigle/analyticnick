@@ -2,7 +2,7 @@ import React from 'react';
 import Plot from 'react-plotly.js';
 
 export default function PlotlyScatter (props) {
-    const { title, caption, plotData, type, id } = props;
+    const { plotData,  id } = props;
     const white = "#ffffff"
     const scatterColors = ["#fda555", // orange
                             "#098f66", // green

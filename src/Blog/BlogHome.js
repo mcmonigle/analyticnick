@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import {
     useRouteMatch,
-    Link
 } from "react-router-dom";
 import bp1img from './Blogs/BlogPost1/img/roc.png'
 const bp1meta = require('./Blogs/BlogPost1/bpmeta.json')
@@ -25,7 +24,6 @@ const sidebar = {
 
 export default function BlogHome() {
     const classes = useStyles();
-    let { url } = useRouteMatch();
 
     return <Grid container justify="space-between" direction="row-reverse" alignItems="flex-start" className={classes.mainGrid}>
               <Sidebar
