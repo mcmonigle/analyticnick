@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 const BlogHome = lazy(() => import('./BlogHome'))
-const BlogPost1 = lazy(() => import('./BlogPost1/BlogPost1'));
+const BlogPost1 = lazy(() => import('./Blogs/BlogPost1/BlogPost1.js'));
 
 
 export default function BlogRoutes(props) {
