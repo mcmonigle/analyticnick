@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div id='root' style={{backgroundColor: '#000000'}}>
+    <div style={{backgroundColor: '#000000'}}>
       <Site/>
       </div>
   );
