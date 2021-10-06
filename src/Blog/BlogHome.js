@@ -7,21 +7,7 @@ import {
     Link
 } from "react-router-dom";
 import bp1img from './Blogs/BlogPost1/img/roc.png'
-const bp1meta = {   "title": "This is the title ",
-                    "date": "May 16th, 2021",
-                    "image": "./BlogPost1/img/roc.png",
-                    "link": "/blog/blog1",
-                    "imageTitle": "image title",
-                    "tags": [{
-                        "label": "MIMIC-III",
-                        "description": "MIMIC-III is a publicly-available dataset consisting of tens of thousands of records of longitudinal EMR data.",
-                        "color": "blue"
-                    },
-                    {   "label": "Machine learning",
-                        "description": "In this post I use machine learning",
-                        "color": "green"
-                    }]}
-// require('./Blogs/BlogPost1/meta.json')
+const bp1meta = require('./Blogs/BlogPost1/meta.json')
 
 const useStyles = makeStyles((theme) => ({
 
