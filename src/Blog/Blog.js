@@ -15,8 +15,8 @@ export default function BlogRoutes(props) {
     return (
          <Suspense fallback={<div>Loading...</div>}>
          <Switch>
+            <Route path={`${path}/blog1`} component={BlogPost1} />
             <Route exact path={path} component={BlogHome} />             
-            <Route path={`/blog/blog1`} component={BlogPost1} />
          </Switch>
         </Suspense>         
     )
