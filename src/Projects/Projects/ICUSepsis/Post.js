@@ -1,4 +1,3 @@
-import { makeStyles } from '@material-ui/core/styles';
 import Sidebar from '../../../Components/Sidebar';
 import MarkdownMathCode from '../../../Components/MarkdownMathCode.js';
 
