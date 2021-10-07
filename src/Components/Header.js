@@ -14,13 +14,14 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
   },
   toolbarSecondary: {
-    justifyContent: 'align-left',
+    justifyContent: 'center',
     overflowX: 'auto',
     
   },
   toolbarLink: {
     padding: theme.spacing(1),
-    marginRight: '48px',
+    marginRight: 'auto',
+    marginLeft: 'auto',
     flexShrink: 0,
   }
 }));
@@ -49,7 +50,7 @@ export default function Header(props) {
               color="inherit"
               noWrap
               key={section.title}
-              variant="body2"
+              variant="body1"
               href={section.url}
               className={classes.toolbarLink}
             >

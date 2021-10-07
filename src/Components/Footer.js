@@ -5,40 +5,32 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
-function Copyright() {
+function Contact() {
   return (
-    <Typography variant="body2"  align="center">
-      {'Copyright © '}
-      <Link  href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
+    <Typography variant="body2" color='#496fff'  align="center">      
+      <Link  href="/about#contact" style={{color: '#a3b6ff'}}>
+        Contact me
+      </Link>
     </Typography>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    color: "#fff",  
-    flex: '0 1 40px'
+    textDecoration: 'underline',
+    color: '#496fff',
+    flex: '0 1 40px',
+    marginTop: '24px'
   }
 }));
 
-export default function Footer(props) {
+export default function Footer() {
   const classes = useStyles();
-  const { description, title } = props;
 
   return (
     <footer className={classes.footer}>
       <Container maxWidth="lg">
-        <Typography variant="h6" align="center" gutterBottom>
-          {title}
-        </Typography>
-        <Typography variant="subtitle1" align="center" component="p">
-          {description}
-        </Typography>
-        <Copyright />
+        <Contact />
       </Container>
     </footer>
   );

@@ -4,8 +4,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Header from './Components/Header';
-import Footer from './Components/Footer';
-// import NET from 'vanta/dist/vanta.net.min'
 import {
   Switch,
   Route,
@@ -15,8 +13,6 @@ const Home = lazy(() => import('./Home'))
 const Blog = lazy(() => import('./Blog/Blog'))
 const About = lazy(() => import('./About'))
 const Projects = lazy(() => import('./Projects/Projects'))
-
-// Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -43,29 +39,6 @@ const sections = [
 export default function Site() {
   const classes = useStyles();
 
-  // const [vantaEffect, setVantaEffect] = useState(0)
-  // const myRef = useRef(null)
-
-  // useEffect(() => {
-  //   if (!vantaEffect) {
-  //     setVantaEffect(NET({
-  //       el: myRef.current,
-  //       mouseControls: false,
-  //       touchControls: true,
-  //       gyroControls: false,
-  //       minHeight: 200.00,
-  //       minWidth: 200.00,
-  //       scale: 1.00,
-  //       scaleMobile: 1.00,
-  //       color: '#403098',
-  //       backgroundColor: '#000'
-  //     }))
-  //   }
-  //   return () => {
-  //     if (vantaEffect) vantaEffect.destroy()
-  //   }
-  // }, [vantaEffect])
-
   return (
     <div>
       <CssBaseline />
@@ -87,7 +60,6 @@ export default function Site() {
             </Grid>
           </Grid>
           </div>
-          <Footer title="Footer" description="Something here to give the footer a purpose!" />
         </Container>
       </div>
       </div>
