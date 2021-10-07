@@ -86,7 +86,7 @@ export default function Home() {
                     alignItems="center"
                     className={classes.mainGrid}>
               <Grid item xs={9} md={9}>
-                <CardActionArea component="a" href="#">
+                <CardActionArea component="a" href="/about">
                     <Card className={classes.card}>
                     <div className={classes.cardDetails}>
                         <CardContent>

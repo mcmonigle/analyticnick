@@ -58,6 +58,7 @@ export default function Sidebar(props) {
       {social.map((network) => (
         socialNetwork(network)
       ))}
+      <p />
     </Grid>
   );
 }

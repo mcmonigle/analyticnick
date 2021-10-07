@@ -103,7 +103,7 @@ const ref2 = {
 }
 
     return ( 
-    <Grid container spacing={5} direction="row-reverse"  className={classes.mainGrid}>
+    <Grid container direction="row-reverse" spacing={5}>
         <Sidebar
             title={sidebar.title}
             description={sidebar.description}
