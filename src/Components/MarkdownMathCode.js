@@ -34,7 +34,10 @@ const components = {
       )
     }
   }
-  components.a = ({node, ...props}) => <a style={{color: "white"}} {...props} > </a> // make links appear white
+  
+  components.a = ({node, ...props}) => {
+    console.log(props)
+  return <a style={{color: "white"}} {...props} >{props.children[0]} </a> }// make links appear white
  
     return ( 
       <ReactMarkdown children={props.markdown} 

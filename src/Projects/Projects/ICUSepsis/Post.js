@@ -21,7 +21,7 @@ const sidebar = {
     ],
 };
 
-
+const url='/projects/icu-sepsis'
 const title_info = `# An Abbreviated Reproduction of "An Interpretable Machine Learning Model for Accurate Prediction of Sepsis in the ICU"    
 
 Original work by Shamim Nemati, PhD, Andre Holder, MD, MSc, Fereshteh Razmi, Matthew D. Stanley, MD, Gari D. Clifford, PhD, and Timothy G. Buchman, PhD, MD.  
@@ -30,7 +30,7 @@ const exec_summary = `
 ### Executive Summary  
 This analysis focuses on reproducing a few key results from the linked paper using the MIMIC-III dataset. In particular, .  
 
-A paragraph with *emphasis* and **strong importance**.[$^\\text{{[1]}}$](#nemati1)
+A paragraph with *emphasis* and **strong importance**.[$^\\text{{[1]}}$](${url}#nemati1)
 
 > *A block quote with ~strikethrough~ and a URL: https://reactjs.org.*
 
@@ -49,7 +49,7 @@ data.plot.scatter(x=var, y='SalePrice', ylim=(0,800000));
 ~~~`
 const methods = `
 ### Methods
-This analysis focuses on reproducing a few key results from the linked paper using the MIMIC-III dataset. In particular, .[$^\\text{{[2]}}$](#react-md)  
+This analysis focuses on reproducing a few key results from the linked paper using the MIMIC-III dataset. In particular, .[$^\\text{{[2]}}$](${url}#react-md)  
 
 A paragraph with *emphasis* and **strong importance**.
 
