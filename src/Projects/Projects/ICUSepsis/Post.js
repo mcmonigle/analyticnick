@@ -81,7 +81,6 @@ And this is the text that goes underneath the table. And this is the text that g
 
 
 export default function BlogPost1(props) {
-const classes = useStyles();
 
 const plotdat = {x : [0, 1, 2, 6, 4, 5, 6, 7, 8],
               y:  [0, 1, 2, 3, 4, 5, 6, 7, 8],
