@@ -7,9 +7,6 @@ import PlotlyROC from '../../../Components/Plots/PlotlyROC.js';
 import References from '../../../Components/References.js'
 import Grid from '@material-ui/core/Grid';
 
-const useStyles = makeStyles((theme) => ({
-    }))
-
 const sidebar = {
     title: 'Disclaimer',
     description:
