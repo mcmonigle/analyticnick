@@ -28,7 +28,7 @@ export default function Sidebar(props) {
   function socialNetwork(network) {
     let icon;
     if (network.type==='GitHub') {
-      icon = <GitHubIcon/>
+      icon = <GitHubIcon />
     }
     else if (network.type === 'LinkedIn') {
       icon = <LinkedInIcon/>
@@ -36,14 +36,18 @@ export default function Sidebar(props) {
     else if (network.type === 'Paper') {
       icon = <DescriptionIcon />
     }
-    return  <Link display="block" style={{color: "#88bee9"}}  variant="body1" href={network.url} key={network}>
-              <Grid container direction="row" spacing={1} alignItems="center">
+    return  <Grid container direction="col" spacing={1} alignItems="center">
                 <Grid item>
+                <Link style={{color: "#88bee9"}}  variant="body1" href={network.url} key={network}>
                   {icon}
+                  </Link>
                 </Grid>
-                <Grid item>{network.name}</Grid>
+                <Grid item>
+                <Link style={{color: "#88bee9"}}  variant="body1" href={network.url} key={network}>
+                  {network.name}
+              </Link>
+                  </Grid>
               </Grid>
-            </Link>
   }
 
   return (

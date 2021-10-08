@@ -1,7 +1,9 @@
-import React from  'react';
+import React, {useState} from  'react';
 import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
     tag: {
@@ -41,15 +43,45 @@ const HtmlTooltip = withStyles((theme) => ({
   }))(Tooltip);
 
 export default function Tag(props) {
+    const [open, setOpen] = useState(false)
     const classes = useStyles();
 
+    function handleTooltipOpen(event) {
+        event.stopPropagation()     
+        setOpen(!open)
+    }
+    function handleTooltipClose() {
+        setOpen(false)
+    }
+
     return ( 
-        <HtmlTooltip
-            title={<React.Fragment>
-                    <span dangerouslySetInnerHTML={{__html: props.description}}></span>
-                </React.Fragment>} >
-            <Button classes={{root: classes.root}} size="small" variant='contained'
-                className={classes.tag}
-                >{props.label}</Button>
-        </HtmlTooltip>)
+        <div>
+            <Hidden mdUp>
+            <ClickAwayListener onClickAway={handleTooltipClose}>
+                <HtmlTooltip     
+                        onClose={handleTooltipClose}
+                        leaveTouchDelay={4000}
+                        title={<React.Fragment>
+                            <span dangerouslySetInnerHTML={{__html: props.description}}></span>
+                        </React.Fragment>} 
+                        open={open} 
+                        onClick={handleTooltipOpen}  >
+                    <Button classes={{root: classes.root}} size="small" variant='contained'
+                        className={classes.tag} 
+                        >{props.label}</Button>
+                </HtmlTooltip>
+            </ClickAwayListener>
+            </Hidden>
+            <Hidden smDown>
+                <HtmlTooltip
+                title={<React.Fragment>
+                        <span dangerouslySetInnerHTML={{__html: props.description}}></span>
+                    </React.Fragment>} >
+                <Button classes={{root: classes.root}} size="small" variant='contained'
+                    className={classes.tag}
+                    >{props.label}</Button>
+                </HtmlTooltip>            
+            </Hidden>
+        </div>
+        )
 }

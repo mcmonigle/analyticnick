@@ -36,7 +36,6 @@ const components = {
   }
   
   components.a = ({node, ...props}) => {
-    console.log(props)
   return <a style={{color: "white"}} {...props} >{props.children[0]} </a> }// make links appear white
  
     return ( 

@@ -6,7 +6,9 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -20,7 +22,7 @@ const useStyles = makeStyles({
     display: 'flex',
     backgroundColor: '#28272b',
     color: '#fff',
-    maxHeight: '155px',
+    minHeight: '155px',
     paddingBottom: 0,
     marginBottom: '12px'
   },
@@ -39,10 +41,16 @@ const useStyles = makeStyles({
 export default function ProjectPreview(props) {
   const classes = useStyles();
   const { post, img } = props;
- 
+
+  const history = useHistory();
+
+  function routeChange(newpath) {  // Using div+onClick instead of an a+href because you can't stop a from propagating (see tags.js)
+    let path = newpath; 
+    history.push(path);
+  }
   return (
-      <CardActionArea component="a" href={post.link}>
-        <Card className={classes.card}>
+      <CardActionArea component="div" onClick={()=>routeChange(post.link)} >
+        <Card className={classes.card} href={post.link}>
           <div className={classes.cardDetails}>
             <CardContent classes={{root: classes.root}}>
               <Typography component="h2" variant="h5">
@@ -54,9 +62,11 @@ export default function ProjectPreview(props) {
               <Typography variant="subtitle1" paragraph>
                 {post.description}
               </Typography>
+              <Grid container direction="col">
               {post.tags.map((tag) => {
-                  return <Tag label={tag.label} description={tag.description} />
+                  return <Grid item> <Tag label={tag.label} description={tag.description} /> </Grid>
               })}
+              </Grid>
             </CardContent>
           </div>
           <Hidden xsDown>

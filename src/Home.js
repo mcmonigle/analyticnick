@@ -81,11 +81,11 @@ export default function Home() {
                   <FeaturedPost key={post.title} post={post} />
                 ))}
               </Grid>
-              <Grid container spacing={5}  
+              <Grid container spacing={4}  
                     justify="center"
                     alignItems="center"
                     className={classes.mainGrid}>
-              <Grid item xs={9} md={9}>
+              <Grid item xs={11} md={11}>
                 <CardActionArea component="a" href="/about">
                     <Card className={classes.card}>
                     <div className={classes.cardDetails}>
