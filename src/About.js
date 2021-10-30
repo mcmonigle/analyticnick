@@ -1,5 +1,7 @@
 import Grid from '@material-ui/core/Grid';
 import aboutPhoto from './images/nickandmeg.JPEG'
+import dogPhoto from './images/ryderandchalupa.png'
+
 export default function About() {
     function AboutText() { 
         return <div>
@@ -19,18 +21,23 @@ export default function About() {
     }
 
 
-    return <Grid container justify="space-between" direction="row-reverse" 
+    return <Grid container justify="center" direction="row" 
                     alignItems="flex-start">
+              <Grid item xs={12} md={8}>
+                    <AboutText />
+              </Grid>
               <Grid item centered xs={9} md={4}>
                 <figure >
                         <img src={aboutPhoto} alt='Nick and Megan!' 
                         style={{maxWidth: '100%',maxHeight: '100%'}} />
                         <figcaption>Megan and I on the Charlottesville mall</figcaption>
                     </figure>
+                    <figure >
+                        <img src={dogPhoto} alt='Ryder and Chalupa' 
+                        style={{maxWidth: '60%',maxHeight: '100%', marginLeft: 'auto', marginRight:'auto'}} />
+                        <figcaption>Our two dogs, Ryder and Chalupa</figcaption>
+                    </figure>
               </Grid>            
-              <Grid item xs={12} md={8}>
-                    <AboutText />
-              </Grid>
           </Grid>
 
 }
