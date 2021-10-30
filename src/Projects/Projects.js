@@ -6,8 +6,7 @@ import {
 } from "react-router-dom";
 
 const ProjectsHome = lazy(() => import('./ProjectsHome'))
-const ICUSepsis = lazy(() => import('./Projects/ICUSepsis/Post.js'));
-const RNN = lazy(() => import('./Projects/RNN-TS/Post.js'));
+const Graphiti = lazy(() => import('./Projects/Graphiti/Post.js'));
 
 export default function ProjectRoutes(props) {
     let { path } = useRouteMatch();
@@ -16,8 +15,7 @@ export default function ProjectRoutes(props) {
          <Suspense fallback={<div>Loading...</div>}>
          <Switch>
             <Route exact path={path} component={ProjectsHome} />             
-            <Route path={`${path}/icu-sepsis`} component={ICUSepsis} />
-            <Route path={`${path}/rnn-ts`} component={RNN} />
+            <Route path={`${path}/graphiti`} component={Graphiti} />
          </Switch>
         </Suspense>         
     )

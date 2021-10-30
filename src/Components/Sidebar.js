@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import WebAsset from '@material-ui/icons/WebAsset';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import DescriptionIcon from '@material-ui/icons/Description';
 
@@ -36,6 +37,9 @@ export default function Sidebar(props) {
     else if (network.type === 'Paper') {
       icon = <DescriptionIcon />
     }
+    else if (network.type === 'Site') {
+      icon = <WebAsset />
+    }
     return  <Grid container direction="col" spacing={1} alignItems="center">
                 <Grid item>
                 <Link style={{color: "#88bee9"}}  variant="body1" href={network.url} key={network}>
@@ -52,13 +56,15 @@ export default function Sidebar(props) {
 
   return (
     <Grid item xs={12} md={3}>
+      {title !== null && title !== '' &&
       <Paper elevation={0} className={classes.sidebarAboutBox}>
         <Typography variant="h6" gutterBottom>
           {title}               
         </Typography>
         <Typography>{description}
           </Typography>
-      </Paper>     
+      </Paper>  
+      }
       {social.map((network) => (
         socialNetwork(network)
       ))}

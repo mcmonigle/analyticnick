@@ -5,14 +5,16 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import mfpImage from '../Projects/Projects/Graphiti/img/graphitiScreenshot.png'
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
     position: 'relative',
-    backgroundColor: theme.palette.grey[800],
+    // backgroundColor: theme.palette.grey[800],
+    backgroundImage: `url(${mfpImage})`,
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(https://source.unsplash.com/random)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -36,14 +38,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MainFeaturedPost(props) {
-  const classes = useStyles();
   const { post } = props;
+  const classes = useStyles();
+  const history = useHistory();
 
+  function routeChange(newpath) {  // Using div+onClick instead of an a+href because you can't stop a from propagating (see tags.js)
+    let path = newpath; 
+    history.push(path);
+  }
+  // const bgImage = require(post.image)
   return (
-    <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${post.image})` }}>
+    <Paper className={classes.mainFeaturedPost} style={{backgroundImage: `url(${mfpImage})`}} >
       {/* Increase the priority of the hero background image */}
-      {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
-      <div className={classes.overlay} />
+      <div className={classes.overlay} onClick={()=>routeChange(post.link)} />
       <Grid container>
         <Grid item md={6}>
           <div className={classes.mainFeaturedPostContent}>
@@ -53,7 +60,7 @@ export default function MainFeaturedPost(props) {
             <Typography variant="h5" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link variant="subtitle1" style={{color: "#88bee9"}} href="#">
+            <Link variant="subtitle1" style={{color: "#88bee9"}} href={post.link}>
               {post.linkText}
             </Link>
           </div>

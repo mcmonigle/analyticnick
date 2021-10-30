@@ -11,6 +11,10 @@
 # production
 /build
 
+# placeholders
+/src/Projects/Projects/ICUSepsis
+/src/Blog/Blogs/BlogPost1
+
 # misc
 .DS_Store
 .env.local

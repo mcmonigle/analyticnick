@@ -3,11 +3,9 @@ import ProjectPreview from '../Components/ProjectPreview'
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
-import icusepsisimg from './Projects/ICUSepsis/img/roc.png'
-import rnnimg from './Projects/RNN-TS/img/missing-data.webp'
+import graphitiimg from './Projects/Graphiti/img/graphiti.png'
 
-const icusepsismeta = require('./Projects/ICUSepsis/meta.json')
-const rnnmeta = require('./Projects/RNN-TS/meta.json')
+const graphitimeta = require('./Projects/Graphiti/meta.json')
 
 const useStyles = makeStyles((theme) => ({
 
@@ -33,8 +31,7 @@ export default function ProjectsHome() {
         social={sidebar.social}
         />            
         <Grid item xs={12} md={8}>
-            <ProjectPreview post={icusepsismeta} img={icusepsisimg} />
-            <ProjectPreview post={rnnmeta} img={rnnimg} />
+            <ProjectPreview post={graphitimeta} img={graphitiimg} />
         </Grid>
     </Grid>
 }

@@ -1,0 +1,12 @@
+{   "title": "Graphiti: An easy-to-use graphing calculator for beautiful mathematical plots",
+    "date": "August 20th, 2021",
+    "image": "../Projects/Graphiti/img/graphiti.png",
+    "link": "/projects/graphiti",
+    "imageTitle": "Graphiti plot",
+    "tags": [{
+        "label": "ReactJS",
+        "description": "This site was built using ReactJS."
+    },{
+        "label": "Web Development",
+        "description": "This project is a demonstration of my interest in web dev."
+    }]}

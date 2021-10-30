@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import MainFeaturedPost from './Components/MainFeaturedPost';
-import FeaturedPost from './Components/FeaturedPost';
+// import FeaturedPost from './Components/FeaturedPost';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
@@ -33,34 +33,35 @@ const useStyles = makeStyles((theme) => ({
       width: 160,
     },
   }));
-  
+// const mfpImage = require('./Projects/Projects/Graphiti/img/graphitiScreenshot.png')
 const mainFeaturedPost = {
-    title: 'Title of a longer featured blog post',
+    title: 'Graphiti: An easy-to-use graphing calculator for beautiful mathematical plots',
     description:
-      "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'https://source.unsplash.com/random',
-    imgText: 'main image description',
+      "An overview of a web app I created using ReactJS and Plotly.",
+    // image: './Projects/Projects/Graphiti/img/graphitiScreenshot.png',
+    imgText: 'Graphiti',
+    link: '/projects/graphiti',
     linkText: 'Continue reading…',
   };
   
-  const featuredPosts = [
-    {
-      title: 'Featured post',
-      date: 'Nov 12',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random',
-      imageText: 'Image Text',
-    },
-    {
-      title: 'Post title',
-      date: 'Nov 11',
-      description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random',
-      imageText: 'Image Text',
-    },
-  ];
+  // const featuredPosts = [
+  //   {
+  //     title: 'Featured post',
+  //     date: 'Nov 12',
+  //     description:
+  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+  //     image: 'https://source.unsplash.com/random',
+  //     imageText: 'Image Text',
+  //   },
+  //   {
+  //     title: 'Post title',
+  //     date: 'Nov 11',
+  //     description:
+  //       'This is a wider card with supporting text below as a natural lead-in to additional content.',
+  //     image: 'https://source.unsplash.com/random',
+  //     imageText: 'Image Text',
+  //   },
+  // ];
   
 const about = {
     title: 'About Me',
@@ -77,9 +78,9 @@ export default function Home() {
         <main>
             <MainFeaturedPost post={mainFeaturedPost} />
               <Grid container spacing={4}>
-                {featuredPosts.map((post) => (
+                {/* {featuredPosts.map((post) => (
                   <FeaturedPost key={post.title} post={post} />
-                ))}
+                ))} */}
               </Grid>
               <Grid container spacing={4}  
                     justify="center"
