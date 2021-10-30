@@ -53,7 +53,7 @@ export default function MainFeaturedPost(props) {
       <div className={classes.overlay} onClick={()=>routeChange(post.link)} />
       <Grid container>
         <Grid item md={6}>
-          <div className={classes.mainFeaturedPostContent}>
+          <div className={classes.mainFeaturedPostContent} onClick={()=>routeChange(post.link)}>
             <Typography component="h1" variant="h3" color="inherit" gutterBottom>
               {post.title}
             </Typography>
