@@ -31,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const sections = [
-  { title: 'Projects', url: '/projects' },
-  { title: 'Blog', url: '/blog' },
-  { title: 'About Me', url: '/about' },  
+  { title: 'PROJECTS', url: '/projects' },
+  { title: 'BLOG', url: '/blog' },
+  { title: 'ABOUT ME', url: '/about' },  
 ];
 
 export default function Site() {
@@ -44,7 +44,7 @@ export default function Site() {
       <CssBaseline />
       <div id="Blogpage" className={classes.pageContainer} >
         <Container maxWidth="lg" className={classes.pageContainer}>
-          <Header title="Nick McMonigle" sections={sections} />
+          <Header title="NICK McMONIGLE" sections={sections} />
           <div className={classes.pageContent}>
           <Grid container  justify="center"
               alignItems="center" spacing={5} className={classes.mainGrid}>

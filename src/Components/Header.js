@@ -9,20 +9,30 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     flex: '0 1 auto',
     borderBottom: `1px solid rgba(255, 255, 255, 0.4);`,
+    // '& .MuiSlider-thumb': {
+    //   borderRadius: '1px',
+    // },
   },
   toolbarTitle: {
     flex: 1,
+    fontSize: '24px',
+    fontWeight: 'bold'
   },
   toolbarSecondary: {
     justifyContent: 'center',
     overflowX: 'auto',
-    
+    borderBottom: '1px solid rgba(255, 255, 255, 0.4)'
   },
   toolbarLink: {
     padding: theme.spacing(1),
     marginRight: 'auto',
     marginLeft: 'auto',
     flexShrink: 0,
+    fontSize: '14px',
+    '& .MuiTypography-body1': {
+      fontSize: '14px'
+    },
+    fontWeight: 'bold'
   }
 }));
 
@@ -41,7 +51,8 @@ export default function Header(props) {
           noWrap
           className={classes.toolbarTitle}
         >
-          <a style={{color: 'inherit', textDecoration: 'none'}} href="/">{title}</a>
+          <a style={{textDecoration: 'none'}} href="/">{title}</a>
+         
         </Typography>
       </Toolbar>
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
