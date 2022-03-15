@@ -6,7 +6,7 @@ import graphitiScreenshot from './img/graphitiScreenshot.png'
 const sidebar = {
     title: '',
     social: [
-        { type: 'Site', name: 'See the site!', url: 'https://www.graphiti.co' },
+        { type: 'Site', name: 'See the app!', url: 'https://graphiti.analyticnick.com' },
         { type: 'GitHub', name: 'See some of my code', url: 'https://github.com/mcmonigle' },
         { type: 'LinkedIn', name: 'Connect with me', url: 'https://linkedin.com/in/nicholasmcmonigle' }
     ],
@@ -16,7 +16,7 @@ const title_info = `# Graphiti: An easy-to-use graphing calculator for beautiful
 `
 const background_info = `
 ### Background  
-I created [Graphiti](https://www.graphiti.co) [(https://www.graphiti.co)](https://www.graphiti.co) over the course of a few months in 2020 to give math educators a more intuitive 
+I created [Graphiti](https://graphiti.analyticnick.com) over the course of a few months in 2020 to give math educators a more intuitive 
 graphing calculator. 
 
 Graphiti is an homage to my love of math education. Prior to becoming a data scientist, 
@@ -73,7 +73,7 @@ export default function Graphiti(props) {
             <figure >
                 <img src={graphitiScreenshot} alt='Graphiti screenshot' 
                 style={{maxWidth: '100%', marginLeft: 'auto', marginRight:'auto'}} />
-                <figcaption>Screenshot from <a href='https://app.graphiti.co'>https://app.graphiti.co</a></figcaption>
+                <figcaption>Screenshot from <a href='https://graphiti.analyticnick.com'>https://graphiti.analyticnick.com</a></figcaption>
             </figure>
             <MarkdownMathCode markdown={background_info} bb={false}  />
             <MarkdownMathCode markdown={tech_info} bb={false}  />
